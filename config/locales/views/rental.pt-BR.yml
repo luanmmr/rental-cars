@@ -1,0 +1,22 @@
+---
+pt-BR:
+  rental_view:
+    title:
+      effectuate_rental: 'Efetivar Locação'
+      editing_subsidiary: 'Editando Locação'
+      new_subsidiary: 'Nova Locação'
+      rental_in_progress: 'Locação em andamento'
+      status: 'Status'
+    form_labels:
+      search: 'Pesquisa'
+      car_id: 'Carros disponíveis'
+    buttons:
+      seek: 'Buscar'
+      schedule: 'Agendar locação'
+      effectuate: 'Efetivar'
+      conclude: 'Concluir'
+      cancellation: 'Cancelar locação'
+    messages:
+      no_car: 'Nenhum carro para essa categoria está disponível'
+      validation_error: 'Você deve corrigir os seguintes erros para continuar'
+      results_found: 'resultado(s) encontrado(s)'

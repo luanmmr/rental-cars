@@ -1,0 +1,29 @@
+<h1 class="ls-title-intro ls-ico-week">
+  <%= t(:effectuate_rental, scope: [:rental_view, :title])%>
+</h1>
+
+<br>
+
+<% if @cars.any? %>
+<%= form_for @car_rental, url: book_rental_path, class: "ls-form row" do |f| %>
+
+<label class="ls-label col-md-4">
+<%= f.label :car_id, t(:car_id, scope: [:rental_view, :form_labels]) %>
+<p class="ls-label-info"></p>
+<div class="ls-custom-select">
+<%= f.collection_select :car_id, @cars, :id, :full_description,
+                        class: "ls-custom" %>
+</div>
+</label>
+<div class="ls-actions-btn">
+  <%= f.submit t(:conclude, scope: [:rental_view, :buttons]),
+      class: 'ls-btn-primary' %>
+</div>
+
+<% end %>
+
+
+<% else %>
+<p> <%= t(:no_car, scope: [:rental_view, :messages]) %> </p>
+
+<% end %>

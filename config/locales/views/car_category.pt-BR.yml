@@ -1,0 +1,14 @@
+---
+pt-BR:
+  car_category_view:
+    title:
+      editing_car_category: 'Editando Categoria'
+      new_car_category: 'Nova Categoria'
+      car_categories: 'Categorias de Carros'
+    buttons:
+      new_register: 'Registrar nova categoria'
+    form_label_info:
+      name: 'Nome da categoria'
+      daily_rate: 'Valor da diária'
+      car_insurance: 'Valor do seguro do carro'
+      third_party_insurance: 'Valor do seguro para terceiros'

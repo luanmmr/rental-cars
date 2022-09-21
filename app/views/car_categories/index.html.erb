@@ -1,0 +1,82 @@
+<h1 class="ls-title-intro ls-ico-bukets">
+  <%= t(:car_categories, scope: [:car_category_view, :title]) %>
+</h1>
+
+<% @car_categories.each do |car_category| %>
+
+<h3>
+  <%= "#{CarCategory.model_name.human}: #{car_category.name}" %>
+</h3>
+
+<br>
+
+<ul>
+  <li>
+    <%= "#{CarCategory.human_attribute_name('daily_rate')}:
+         #{format("R$ %.2f", car_category.daily_rate)}" %>
+  </li>
+  <li>
+    <%= "#{CarCategory.human_attribute_name('car_insurance')}:
+         #{format("R$ %.2f", car_category.car_insurance)}" %>
+  </li>
+  <li>
+    <%= "#{CarCategory.human_attribute_name('third_party_insurance')}:
+         #{format("R$ %.2f", car_category.third_party_insurance)}" %>
+  </li>
+</ul>
+
+<br>
+
+<div id=<%= "car_category-#{car_category.id}" %>>
+  <%= link_to t(:edit, scope: [:application_view, :buttons]),
+      edit_car_category_path(car_category), class: "ls-btn" %>
+<%= link_to t(:delete, scope: [:application_view, :buttons]),
+    car_category_path(car_category), method: :delete, data:
+    {confirm: "#{t(:confirm?, scope: [:application_view, :messages])}"},
+    class: "ls-btn-primary-danger ls-ico-remove" %>
+</div>
+
+<div id="cars" class="ls-tab-content ls-active">
+  <table class="ls-table ls-table-striped ls-bg-header">
+    <thead>
+      <tr>
+        <th>
+          <%= CarModel.model_name.human %>
+        </th>
+        <th class="hidden-xs">
+         <%= CarModel.human_attribute_name('manufacturer_id') %>
+        </th>
+        <th>
+         <%= CarModel.human_attribute_name('year') %>
+        </th>
+        <th class="hidden-xs">
+          <%= CarModel.human_attribute_name('motorization') %>
+        </th>
+        <th>
+          <%= CarModel.human_attribute_name('fuel_type') %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% car_category.car_models.each do |car_model| %>
+      <tr>
+        <td><%= car_model.name %></td>
+        <td class="hidden-xs"><%= car_model.manufacturer.name %></td>
+        <td><%= car_model.year %></td>
+        <td class="hidden-xs"><%= car_model.motorization %></td>
+        <td><%= car_model.fuel_type %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+<br>
+<br>
+<% end %>
+
+<%= link_to t(:new_register, scope: [:car_category_view, :buttons]),
+           new_car_category_path, class: 'ls-btn-primary' %>
+
+                                        <br><br><br>

@@ -1,0 +1,10 @@
+---
+pt-BR:
+  client_view:
+    title:
+      editing_client: 'Editando Cliente'
+      new_client: 'Novo Cliente'
+    buttons:
+      new_register: 'Registrar novo cliente'
+    form_label_info:
+      name: 'Nome e Sobrenome'

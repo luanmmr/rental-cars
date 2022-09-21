@@ -1,0 +1,11 @@
+---
+pt-BR:
+  activerecord:
+    attributes:
+      cancel_rental:
+        rental_id: 'Locação'
+        rental: 'Locação'
+        reason: 'Motivo'
+    methods:
+      cancel_rental:
+        cannot_cancel: 'Locação com menos de 24hrs para o início'

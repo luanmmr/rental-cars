@@ -1,0 +1,52 @@
+<h1 class="ls-title-intro ls-ico-cart">
+  <%= Car.model_name.human(count: 2) %>
+</h1>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+      <a href="#" ><%= @car.license_plate %></a>
+      <small>
+        <%= "#{@car.car_model.manufacturer.name} #{@car.car_model.name}" %>
+      </small>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= CarModel.human_attribute_name('year') %>
+      </span>
+      <strong><%= @car.car_model.year %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= CarModel.human_attribute_name('motorization') %>
+      </span>
+      <strong><%= @car.car_model.motorization %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= CarModel.human_attribute_name('fuel_type') %>
+      </span>
+      <strong><%= @car.car_model.fuel_type %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= Car.human_attribute_name('mileage') %>
+      </span>
+      <strong><%= format("%.2f", @car.mileage) %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= Car.human_attribute_name('subsidiary_id') %>
+      </span>
+      <strong><%= @car.subsidiary.name %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= Car.human_attribute_name('color') %>
+      </span>
+      <strong><%= @car.color %></strong>
+    </div>
+  </div>
+</div>

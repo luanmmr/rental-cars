@@ -1,0 +1,43 @@
+<h1 class="ls-title-intro ls-ico-users">
+  <%= Client.model_name.human(count: 2) %>
+</h1>
+
+<% @clients.each do |client| %>
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+      <h3><%= client.name %></h3>
+    </div>
+    <div class="col-md-3 ls-txt-right" id="client-<%= client.id %>">
+      <%= link_to t(:edit, scope: [:application_view, :buttons]),
+                    edit_client_path(client), class: "ls-btn" %>
+      <%= link_to t(:delete, scope: [:application_view, :buttons]),
+                    client, class: "ls-btn-primary-danger
+      ls-ico-remove", method: :delete, data: {confirm: "#{t(:confirm?,
+                         scope: [:application_view, :messages])}"} %>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Client.human_attribute_name('email') %>
+      </span>
+      <strong><%= client.email %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Client.human_attribute_name('document') %>
+      </span>
+      <strong><%= client.document %></strong>
+    </div>
+  </div>
+</div>
+<br>
+<% end %>
+
+<br>
+
+<%= link_to t(:new_register, scope: [:client_view, :buttons]),
+            new_client_path, class: 'ls-btn-primary' %>
+<br>
+<br>

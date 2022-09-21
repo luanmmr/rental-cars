@@ -1,0 +1,12 @@
+<h1 class="ls-title-intro ls-ico-week">
+  <%= Rental.model_name.human(count: 2) %>
+</h1>
+
+<%= render partial: 'search' %>
+
+<%= render partial: 'partial_results' %>
+
+<br>
+
+<%= link_to t(:schedule, scope: [:rental_view, :buttons]),
+            new_rental_path, class: 'ls-btn-primary' %>

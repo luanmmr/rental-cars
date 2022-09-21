@@ -1,0 +1,899 @@
+Started GET "/" for 172.20.0.1 at 2022-09-21 05:10:20 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Parameters: {"only"=>[:index]}
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2022-09-21 05:10:20 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 160ms (Views: 155.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/locawebstyle/assets/images/ico-boilerplate.png" for 172.20.0.1 at 2022-09-21 05:10:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/locawebstyle/assets/images/ico-boilerplate.png"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 172.20.0.1 at 2022-09-21 05:10:24 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.20.0.1 at 2022-09-21 05:10:25 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 172.20.0.1 at 2022-09-21 05:10:57 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YR8BwI1Ill3tKgCtZyqoEbfSHNZrMkHABBzLJ1pwfPc5Yqlx/gTM8MqueStR215tmpHvq0/eLViI9apfOiC1Hw==", "user"=>{"email"=>"luan@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luan@hotmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 116ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 172.20.0.1 at 2022-09-21 05:10:57 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"only"=>[:index]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subsidiaries" for 172.20.0.1 at 2022-09-21 05:11:01 +0000
+Processing by SubsidiariesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering subsidiaries/index.html.erb within layouts/application
+  [1m[36mSubsidiary Load (0.2ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/subsidiaries/index.html.erb:5
+  Rendered subsidiaries/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars" for 172.20.0.1 at 2022-09-21 05:11:03 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:45
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/index.html.erb:93
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/cars/index.html.erb:118
+  Rendered cars/index.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 48ms (Views: 40.7ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/cars/1" for 172.20.0.1 at 2022-09-21 05:11:08 +0000
+Processing by CarsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4Y5YsChfCAZRhhoagOPRZoreIJdXcJJgKUO7BobHqyhvkJXIwxGYIVe58TEZj/ias09ELmGgX7+pi6pa62WGWQ==", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:45
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cars_controller.rb:45
+  [1m[36mCarRental Load (0.1ms)[0m  [1m[34mSELECT  "car_rentals".* FROM "car_rentals" WHERE "car_rentals"."car_id" = ? LIMIT ?[0m  [["car_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:45
+  [1m[36mCar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cars" WHERE "cars"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/cars_controller.rb:45
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cars_controller.rb:45
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 16ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/cars" for 172.20.0.1 at 2022-09-21 05:11:08 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:45
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/index.html.erb:93
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/cars/index.html.erb:118
+  Rendered cars/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cars" for 172.20.0.1 at 2022-09-21 05:11:10 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:45
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/index.html.erb:93
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/cars/index.html.erb:118
+  Rendered cars/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients" for 172.20.0.1 at 2022-09-21 05:11:11 +0000
+Processing by ClientsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:5
+  Rendered clients/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/car_categories" for 172.20.0.1 at 2022-09-21 05:11:12 +0000
+Processing by CarCategoriesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering car_categories/index.html.erb within layouts/application
+  [1m[36mCarCategory Load (0.2ms)[0m  [1m[34mSELECT "car_categories".* FROM "car_categories"[0m
+  ↳ app/views/car_categories/index.html.erb:5
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 1]]
+  ↳ app/views/car_categories/index.html.erb:61
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 2]]
+  ↳ app/views/car_categories/index.html.erb:61
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 3]]
+  ↳ app/views/car_categories/index.html.erb:61
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  Rendered car_categories/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rentals" for 172.20.0.1 at 2022-09-21 05:11:13 +0000
+Processing by RentalsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering rentals/index.html.erb within layouts/application
+  Rendered rentals/_search.html.erb (0.6ms)
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" ORDER BY "rentals"."status" ASC[0m
+  ↳ app/views/rentals/_partial_results.html.erb:23
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:26
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:28
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:26
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:28
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:26
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:28
+  Rendered rentals/_partial_results.html.erb (8.6ms)
+  Rendered rentals/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/car_categories" for 172.20.0.1 at 2022-09-21 05:11:14 +0000
+Processing by CarCategoriesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering car_categories/index.html.erb within layouts/application
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT "car_categories".* FROM "car_categories"[0m
+  ↳ app/views/car_categories/index.html.erb:5
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 1]]
+  ↳ app/views/car_categories/index.html.erb:61
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 2]]
+  ↳ app/views/car_categories/index.html.erb:61
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 3]]
+  ↳ app/views/car_categories/index.html.erb:61
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  Rendered car_categories/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clients" for 172.20.0.1 at 2022-09-21 05:11:15 +0000
+Processing by ClientsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:5
+  Rendered clients/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clients" for 172.20.0.1 at 2022-09-21 05:11:16 +0000
+Processing by ClientsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:5
+  Rendered clients/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars" for 172.20.0.1 at 2022-09-21 05:11:17 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:45
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/index.html.erb:93
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/cars/index.html.erb:118
+  Rendered cars/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subsidiaries" for 172.20.0.1 at 2022-09-21 05:11:18 +0000
+Processing by SubsidiariesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering subsidiaries/index.html.erb within layouts/application
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/subsidiaries/index.html.erb:5
+  Rendered subsidiaries/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 172.20.0.1 at 2022-09-21 05:11:19 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"only"=>[:index]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 172.23.0.1 at 2022-09-21 05:16:09 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Parameters: {"only"=>[:index]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 157ms (Views: 146.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 172.23.0.1 at 2022-09-21 05:16:11 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"only"=>[:index]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 172.23.0.1 at 2022-09-21 05:16:13 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"only"=>[:index]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for 172.23.0.1 at 2022-09-21 05:16:15 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QuVM6MULnFOil2DfJSsWSYfum2pSKZhPyVXq1o687/DM+4GQLkUMdKSoi/S8Rz+1vn//02T5VZBJnfuK4x7CgQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 172.23.0.1 at 2022-09-21 05:16:15 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"only"=>[:index]}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.23.0.1 at 2022-09-21 05:16:15 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 172.23.0.1 at 2022-09-21 05:16:30 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wG9mEnlh65S6tdYSplpVvIDo0eOCTU5LhT4KRVU5UMWaNM6N6PryxxmeeT0UEbM1Lmw/HE442n2QfDpwyVjYEA==", "user"=>{"email"=>"luan@teste.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luan@teste.com"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wG9mEnlh65S6tdYSplpVvIDo0eOCTU5LhT4KRVU5UMWaNM6N6PryxxmeeT0UEbM1Lmw/HE442n2QfDpwyVjYEA==", "user"=>{"email"=>"luan@teste.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 114ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 172.23.0.1 at 2022-09-21 05:16:37 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TYBidlYgJSxqbZ9/o62/G8mBKTQFiA8hxgamx7ovvb0X28rpx7s8f8lGMFAR5lmSZwXHy8n9mxfTRJbyJk41aA==", "user"=>{"email"=>"luan@teste.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luan@teste.com"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TYBidlYgJSxqbZ9/o62/G8mBKTQFiA8hxgamx7ovvb0X28rpx7s8f8lGMFAR5lmSZwXHy8n9mxfTRJbyJk41aA==", "user"=>{"email"=>"luan@teste.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 117ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.24.0.1 at 2022-09-21 05:20:32 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Parameters: {"only"=>[:index]}
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.24.0.1 at 2022-09-21 05:20:32 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 162ms (Views: 156.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 172.24.0.1 at 2022-09-21 05:20:38 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJRaShuitAk5Bgdse9Xotxx7lDkNhkweHahPdkci0FXaz/LVijmtWpotqEPJng4+sv96xsHz2CgI6n9D20NYgA==", "user"=>{"email"=>"luan@teste.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luan@teste.com"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJRaShuitAk5Bgdse9Xotxx7lDkNhkweHahPdkci0FXaz/LVijmtWpotqEPJng4+sv96xsHz2CgI6n9D20NYgA==", "user"=>{"email"=>"luan@teste.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 111ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 172.24.0.1 at 2022-09-21 05:20:43 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PQVsgfoDkq/7yM+e0RpNxrJ5hZcCmqk8KYxBPmvCbBFnXsQea5iL/FjjYLFjUatPHP1raM7vPQo8znEL96PkxA==", "user"=>{"email"=>"luan@teste.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luan@teste.com"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PQVsgfoDkq/7yM+e0RpNxrJ5hZcCmqk8KYxBPmvCbBFnXsQea5iL/FjjYLFjUatPHP1raM7vPQo8znEL96PkxA==", "user"=>{"email"=>"luan@teste.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 133ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 172.24.0.1 at 2022-09-21 05:20:50 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wXz4Ks/ACDUrfLOqQ3uOrGcLbZSNQEjrL/Hhe4mZqnibJ1C1XlsRZohXHIXxMGglyY+Da0E13N06s9FOFfgirQ==", "user"=>{"email"=>"luan@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luan@hotmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 105ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 172.24.0.1 at 2022-09-21 05:20:50 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"only"=>[:index]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subsidiaries" for 172.24.0.1 at 2022-09-21 05:21:11 +0000
+Processing by SubsidiariesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering subsidiaries/index.html.erb within layouts/application
+  [1m[36mSubsidiary Load (0.2ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/subsidiaries/index.html.erb:5
+  Rendered subsidiaries/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subsidiaries" for 172.24.0.1 at 2022-09-21 05:21:22 +0000
+Processing by SubsidiariesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering subsidiaries/index.html.erb within layouts/application
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/subsidiaries/index.html.erb:5
+  Rendered subsidiaries/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars" for 172.24.0.1 at 2022-09-21 05:21:23 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:45
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mSubsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT  "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:48
+  [1m[36mCACHE Subsidiary Load (0.0ms)[0m  [1m[34mSELECT  "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:50
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/index.html.erb:93
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:96
+  [1m[36mCACHE CarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:97
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/cars/index.html.erb:118
+  Rendered cars/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 49ms (Views: 43.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/clients" for 172.24.0.1 at 2022-09-21 05:21:25 +0000
+Processing by ClientsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:5
+  Rendered clients/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/car_categories" for 172.24.0.1 at 2022-09-21 05:21:28 +0000
+Processing by CarCategoriesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering car_categories/index.html.erb within layouts/application
+  [1m[36mCarCategory Load (0.2ms)[0m  [1m[34mSELECT "car_categories".* FROM "car_categories"[0m
+  ↳ app/views/car_categories/index.html.erb:5
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 1]]
+  ↳ app/views/car_categories/index.html.erb:61
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 2]]
+  ↳ app/views/car_categories/index.html.erb:61
+  [1m[36mManufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 3]]
+  ↳ app/views/car_categories/index.html.erb:61
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  [1m[36mCACHE Manufacturer Load (0.0ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/car_categories/index.html.erb:64
+  Rendered car_categories/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rentals" for 172.24.0.1 at 2022-09-21 05:21:31 +0000
+Processing by RentalsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering rentals/index.html.erb within layouts/application
+  Rendered rentals/_search.html.erb (0.6ms)
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" ORDER BY "rentals"."status" ASC[0m
+  ↳ app/views/rentals/_partial_results.html.erb:23
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:26
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:28
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:26
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:28
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:26
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/rentals/_partial_results.html.erb:28
+  Rendered rentals/_partial_results.html.erb (10.2ms)
+  Rendered rentals/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rentals/new" for 172.24.0.1 at 2022-09-21 05:21:33 +0000
+Processing by RentalsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering rentals/new.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/rentals/_form.html.erb:36
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT "car_categories".* FROM "car_categories"[0m
+  ↳ app/views/rentals/_form.html.erb:45
+  Rendered rentals/_form.html.erb (4.9ms)
+  Rendered rentals/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rentals" for 172.24.0.1 at 2022-09-21 05:21:43 +0000
+Processing by RentalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gsTcriSQuEaWJT+7jkEKn/nIoVpBd15NrbsiTppckwvIT9jaqsiVCRa0lcWZEFBEEX7E/83UNB9fImyMHYltOA==", "rental"=>{"start_date"=>"21/09/2022", "end_date"=>"21/09/2022", "client_id"=>"2", "car_category_id"=>"2"}, "commit"=>"Criar Locação"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:13
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:13
+  [1m[36mCarCategory Load (0.1ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:13
+  [1m[36mCarModel Load (0.0ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."car_category_id" = ?[0m  [["car_category_id", 2]]
+  ↳ app/models/rental.rb:75
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."car_category_id" = ? AND "rentals"."status" BETWEEN ? AND ? AND (("rentals"."start_date" BETWEEN ? AND ? OR "rentals"."end_date" BETWEEN ? AND ?) OR (start_date < '2022-09-21' AND end_date > '2022-09-21'))[0m  [["car_category_id", 2], ["status", 0], ["status", 1], ["start_date", "2022-09-21"], ["start_date", "2022-09-21"], ["end_date", "2022-09-21"], ["end_date", "2022-09-21"]]
+  ↳ app/models/rental.rb:78
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."car_model_id" IN (SELECT "car_models"."id" FROM "car_models" WHERE "car_models"."car_category_id" = ?)[0m  [["car_category_id", 2]]
+  ↳ app/models/rental.rb:78
+  [1m[36mRental Create (0.3ms)[0m  [1m[32mINSERT INTO "rentals" ("code", "start_date", "end_date", "client_id", "car_category_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["code", "fc4ed17e60"], ["start_date", "2022-09-21"], ["end_date", "2022-09-21"], ["client_id", 2], ["car_category_id", 2], ["created_at", "2022-09-21 05:21:43.887652"], ["updated_at", "2022-09-21 05:21:43.887652"], ["user_id", 1]]
+  ↳ app/controllers/rentals_controller.rb:13
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:13
+Redirected to http://localhost:3000/rentals/4
+Completed 302 Found in 17ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/rentals/4" for 172.24.0.1 at 2022-09-21 05:21:43 +0000
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:25
+  Rendering rentals/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/rentals/_full_results.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/rentals/_full_results.html.erb:29
+  [1m[36mCarCategory Load (0.0ms)[0m  [1m[34mSELECT  "car_categories".* FROM "car_categories" WHERE "car_categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/rentals/_full_results.html.erb:35
+  Rendered rentals/_full_results.html.erb (3.6ms)
+  Rendered rentals/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+

@@ -1,0 +1,58 @@
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+      <h2><%= @rental.code %></h2>
+    </div>
+    <div class="col-md-3 ls-txt-right" id=<%= "rental-#{@rental.id}" %>>
+      <% if @valid && @rental.scheduled? %>
+      <%= link_to t(:effectuate, scope: [:rental_view, :buttons]),
+                     book_rental_path(@rental), class: "ls-btn" %>
+      <% end %>
+      <% if !@rental.canceled? && @rental.scheduled? %>
+        <%= link_to t(:cancel, scope: [:application_view, :buttons]),
+                      cancel_rental_path(@rental),
+                      class: "ls-btn-primary-danger" %>
+      <% end %>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Rental.human_attribute_name('client') %>
+      </span>
+      <strong><%= @rental.client.name %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= User.model_name.human %>
+      </span>
+      <strong><%= @rental.user.email %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Rental.human_attribute_name('car_category') %>
+      </span>
+      <strong><%= @rental.car_category.name %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Rental.human_attribute_name('start_date') %>
+      </span>
+      <strong><%= @rental.start_date.strftime("%d/%m/%Y") if @rental %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Client.human_attribute_name('email') %>
+      </span>
+      <strong><%= @rental.client.email %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Rental.human_attribute_name('end_date') %>
+      </span>
+      <strong>
+        <%= @rental.end_date.strftime("%d/%m/%Y") if @rental %>
+      </strong>
+    </div>
+  </div>
+</div>

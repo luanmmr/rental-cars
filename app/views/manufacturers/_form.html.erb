@@ -1,0 +1,27 @@
+<% if @manufacturer.errors.any? %>
+  <div class="ls-alert-danger">
+    <%= t(:validation_error, scope: [:application_view, :messages]) %>
+  </div>
+  <ul>
+    <% @manufacturer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+  </ul>
+  <br>
+<% end %>
+
+<br><br>
+
+<%= form_for @manufacturer, class: "ls-form row" do |f| %>
+<label class="ls-label col-md-2">
+<%= f.label :name %>
+<p class="ls-label-info">
+  <%= t(:name, scope: [:manufacturer_view, :form_label_info]) %>
+</p>
+<%= f.text_field :name %>
+</label>
+
+<div class="ls-actions-btn">
+<%= f.submit class: 'ls-btn-primary' %>
+</div>
+<% end %>

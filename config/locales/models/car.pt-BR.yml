@@ -1,0 +1,29 @@
+---
+pt-BR:
+  cars:
+    create:
+      success: 'Carro registrado com sucesso'
+    update:
+      success: 'Carro atualizado com sucesso'
+    destroy:
+      success: 'Carro deletado com sucesso'
+  activerecord:
+    models:
+      car:
+        one: 'Carro'
+        other: 'Carros'
+    attributes:
+      car:
+        license_plate: 'Placa'
+        color: 'Cor'
+        mileage: 'Quilometragem'
+        car_model_id: 'Modelo do Carro'
+        car_model: 'Modelo do Carro'
+        subsidiary_id: 'Filial'
+        subsidiary: 'Filial'
+    methods:
+      car:
+        full_description:
+          incomplete_car: 'Carro não cadastro corretamente'
+        valid_license_plate:
+          invalid_license_plate: 'não é válida'

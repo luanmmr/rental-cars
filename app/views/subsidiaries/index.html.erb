@@ -1,0 +1,43 @@
+<h1 class="ls-title-intro ls-ico-earth">
+  <%= Subsidiary.model_name.human(count: 2) %>
+</h1>
+
+<% @subsidiaries.each do |subsidiary| %>
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+      <%= link_to subsidiary.name, subsidiary_path(subsidiary) %>
+      <small>
+        <%= "#{subsidiary.address}, #{subsidiary.number}, "\
+            "#{subsidiary.district}, #{subsidiary.state} - "\
+            "#{subsidiary.city} — #{subsidiary.zip_code}" %>
+      </small>
+    </div>
+    <div class="col-md-3 ls-txt-right" id="subsidiary-<%= subsidiary.id %>">
+      <%= link_to t(:edit, scope: [:application_view, :buttons]),
+                    edit_subsidiary_path(subsidiary), class: "ls-btn" %>
+      <%= link_to t(:delete, scope: [:application_view, :buttons]),
+                    subsidiary, class: "ls-btn-primary-danger ls-ico-remove",
+                    method: :delete, data: {confirm: "#{t(:confirm?,
+                       scope: [:application_view, :messages])}"} %>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Subsidiary.human_attribute_name('cnpj') %>
+      </span>
+      <strong><%= subsidiary.cnpj %></strong>
+    </div>
+  </div>
+</div>
+<br>
+<% end %>
+
+<br>
+
+<%= link_to t(:new_register, scope: [:subsidiary_view, :buttons]),
+              new_subsidiary_path, class: 'ls-btn-primary' %>
+
+<br>
+<br>

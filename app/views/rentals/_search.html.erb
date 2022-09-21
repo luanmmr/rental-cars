@@ -1,0 +1,8 @@
+<div class="ls-box-filter">
+<%= form_tag search_rentals_path, method: :get,
+             class: "ls-form ls-form-inline" do %>
+<%= label_tag :q, t(:search, scope: [:rental_view, :form_labels]) %>
+<%= text_field_tag :q %>
+<%= submit_tag t(:seek, scope: [:rental_view, :buttons]), class: "ls-btn" %>
+<% end %>
+</div>

@@ -1,0 +1,12 @@
+---
+pt-BR:
+  activerecord:
+    attributes:
+      car_rental:
+        car_id: 'Carro'
+        car: 'Carro'
+        rental_id: 'Locação'
+        rental: 'Locação'
+        daily_price: 'Diária'
+        car_insurance: 'Seguro do Carro'
+        third_party_insurance: 'Seguro para Terceiros'

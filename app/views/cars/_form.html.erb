@@ -1,0 +1,55 @@
+<% if @car.errors.any? %>
+  <div class="ls-alert-danger">
+    <%= t(:validation_error, scope: [:application_view, :messages]) %>
+  </div>
+  <ul>
+    <% @car.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+  <br>
+<% end %>
+
+<%= form_with(model: @car, local: true, class: "ls-form row") do
+                                                              |form| %>
+<label class="ls-label col-md-3">
+  <%= form.label :license_plate %>
+  <p class="ls-label-info">
+    <%= t(:license_plate, scope: [:car_view, :form_label_info]) %>
+  </p>
+  <%= form.text_field :license_plate %>
+</label>
+
+<label class="ls-label col-md-3">
+  <%= form.label :color %>
+    <p class="ls-label-info"></p>
+  <%= form.text_field :color %>
+</label>
+
+<label class="ls-label col-md-3">
+  <%= form.label :mileage %>
+  <p class="ls-label-info"></p>
+  <%= form.text_field :mileage %>
+</label>
+
+<label class="ls-label col-md-4">
+  <%= form.label :car_model_id %>
+  <div class="ls-custom-select">
+   <%= form.collection_select :car_model_id, @car_models, :id,
+                             :full_description, class: "ls-custom" %>
+  </div>
+</label>
+
+<label class="ls-label col-md-6">
+  <%= form.label :subsidiary_id %>
+  <div class="ls-custom-select">
+   <%= form.collection_select :subsidiary_id, @subsidiaries, :id,
+                             :full_description, class: "ls-custom" %>
+  </div>
+</label>
+
+<div class="ls-actions-btn">
+  <%= form.submit class: 'ls-btn-primary' %>
+</div>
+
+<% end %>

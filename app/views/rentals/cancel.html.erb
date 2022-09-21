@@ -1,0 +1,32 @@
+<h1 class="ls-title-intro ls-ico-week">
+  <%= "#{Rental.model_name.human} ##{@rental.code}" %>
+</h1>
+
+<% if @cancel_rental.errors.any? %>
+  <div class="ls-alert-danger">
+    <%= t(:validation_error, scope: [:application_view, :messages]) %>
+  </div>
+  <ul>
+    <% @cancel_rental.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<br>
+
+<%= form_with(model: @cancel_rental, url: cancel_rental_path, local: true,
+              class: "ls-form-horizontal", method: :post) do |form| %>
+
+<label class="ls-label col-md-9">
+    <%= form.label :reason, CancelRental.human_attribute_name('reason') %>
+      <p class="ls-label-info"></p>
+        <%= form.text_area :reason, size: '100x10' %>
+</label>
+
+<div class="ls-actions-btn">
+  <%= form.submit t(:cancellation, scope: [:rental_view, :buttons]),
+                   class: 'ls-btn-primary' %>
+</div>
+
+<% end %>

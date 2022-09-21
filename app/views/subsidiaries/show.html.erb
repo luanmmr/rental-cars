@@ -1,0 +1,78 @@
+<h1 class="ls-title-intro ls-ico-earth">
+  <%= Subsidiary.model_name.human %>
+</h1>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+        <a href="#" ><%= "#{@subsidiary.name}" %></a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Subsidiary.human_attribute_name('cnpj') %>
+      </span>
+      <strong><%= @subsidiary.cnpj %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Subsidiary.human_attribute_name('address') %>
+      </span>
+      <strong><%= @subsidiary.address %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Subsidiary.human_attribute_name('number') %>
+      </span>
+      <strong><%= @subsidiary.number %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Subsidiary.human_attribute_name('district') %>
+      </span>
+      <strong><%= @subsidiary.district %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Subsidiary.human_attribute_name('state') %>
+      </span>
+      <strong><%= @subsidiary.state %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Subsidiary.human_attribute_name('city') %>
+      </span>
+      <strong><%= @subsidiary.city %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= Subsidiary.human_attribute_name('zip_code') %>
+      </span>
+      <strong><%= @subsidiary.zip_code %></strong>
+    </div>
+  </div>
+</div>
+
+<div id="cars" class="ls-tab-content ls-active">
+  <table class="ls-table ls-table-striped ls-bg-header">
+    <thead>
+      <tr>
+        <th><%= Car.human_attribute_name('license_plate') %></th>
+        <th class="hidden-xs"><%= Manufacturer.model_name.human %></th>
+        <th><%= CarModel.model_name.human %></th>
+        <th class="hidden-xs"><%= Subsidiary.model_name.human %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @subsidiary.cars.each do |car| %>
+      <tr>
+        <td><%= link_to car.license_plate, car_path(car) %></td>
+        <td class="hidden-xs"><%= car.car_model.manufacturer.name %></td>
+        <td><%= car.car_model.name %></td>
+        <td class="hidden-xs"><%= car.subsidiary.name %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

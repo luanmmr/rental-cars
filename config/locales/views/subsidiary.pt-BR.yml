@@ -1,0 +1,17 @@
+---
+pt-BR:
+  subsidiary_view:
+    title:
+      editing_subsidiary: 'Editando filial'
+      new_subsidiary: 'Nova filial'
+    buttons:
+      new_register: 'Registrar nova filial'
+    form_label_info:
+      name: 'Nome da filial'
+      cnpj: 'Digite apenas números'
+      address: 'Ex: Rua Itapaiuna'
+      number: 'Número do endereço'
+      district: 'Ex: Vila Andrade'
+      zip_code: 'Digite sem hífen ou pontos'
+      state: 'Ex: SP'
+      city: 'Nome da cidade'

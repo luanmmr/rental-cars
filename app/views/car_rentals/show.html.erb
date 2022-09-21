@@ -1,0 +1,65 @@
+<h1 class="ls-title-intro ls-ico-cart">
+  <%= t(:rental_in_progress, scope: [:rental_view, :title]) %>
+</h1>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+      <a href="#" ><%= @car_rental.car.license_plate %></a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= Client.human_attribute_name('name') %>
+      </span>
+      <strong><%= @car_rental.rental.client.name %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= Client.human_attribute_name('document') %>
+      </span>
+      <strong><%= @car_rental.rental.client.document %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= CarModel.model_name.human %>
+      </span>
+      <strong><%= @car_rental.car.car_model.name %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+        <%= CarCategory.human_attribute_name('daily_rate') %>
+      </span>
+      <strong>
+        <%= format("R$ %.2f", @car_rental.rental.daily_price_total) %>
+      </strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= t(:status, scope: [:rental_view, :title]) %>
+      </span>
+      <strong>
+        <%= t(@car_rental.rental.status, scope: [:activerecord, :attributes, :rental, :status]) %>
+      </strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= Rental.human_attribute_name('car_category') %>
+      </span>
+      <strong><%= @car_rental.rental.car_category.name %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= Rental.human_attribute_name('start_date') %>
+      </span>
+      <strong><%= @car_rental.rental.start_date.strftime("%d/%m/%Y") %></strong>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <span class="ls-list-label">
+       <%= Rental.human_attribute_name('end_date') %>
+      </span>
+      <strong><%= @car_rental.rental.end_date.strftime("%d/%m/%Y") %></strong>
+    </div>
+  </div>
+</div>

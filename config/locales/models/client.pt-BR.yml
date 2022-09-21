@@ -1,0 +1,23 @@
+---
+pt-BR:
+  clients:
+    create:
+      success: 'Cliente registrado com sucesso'
+    update:
+      success: 'Cliente atualizado com sucesso'
+    destroy:
+      success: 'Cliente deletado com sucesso'
+  activerecord:
+    models:
+      client:
+        one: 'Cliente'
+        other: 'Clientes'
+    attributes:
+      client:
+        name: 'Nome'
+        document: 'CPF'
+        email: 'Email'
+    methods:
+      client:
+        name_document:
+          incomplete_client: 'Cliente com dados incompletos'

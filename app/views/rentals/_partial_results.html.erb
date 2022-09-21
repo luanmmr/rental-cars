@@ -1,0 +1,37 @@
+<div id="cars" class="ls-tab-content ls-active">
+  <table class="ls-table ls-table-striped ls-bg-header">
+    <thead>
+      <tr>
+        <th>
+          <%= t(:code, scope: [:activerecord, :attributes, :rental]) %>
+        </th>
+        <th class="hidden-xs">
+          <%= t(:client, scope: [:activerecord, :attributes, :rental]) %>
+        </th>
+        <th>
+          <%= t(:email, scope: [:activerecord, :attributes, :client]) %>
+        </th>
+        <th class="hidden-xs">
+          <%= t(:car_category, scope: [:activerecord, :attributes, :rental]) %>
+        </th>
+        <th>
+          <%= t(:status, scope: [:rental_view, :title]) %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @rentals.each do |rental| %>
+      <tr>
+        <td><%= link_to rental.code, rental_path(rental) %></td>
+        <td class="hidden-xs"><%= rental.client.name %></td>
+        <td><%= rental.client.email %></td>
+        <td class="hidden-xs"><%= rental.car_category.name %></td>
+        <td>
+          <% rental.expired? %>
+          <%= t(rental.status, scope: [:activerecord, :attributes, :rental, :status]) %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

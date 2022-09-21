@@ -1,0 +1,12 @@
+---
+pt-BR:
+  car_model_view:
+    title:
+      editing_car_model: 'Editando Modelo'
+      new_car_model: 'Novo Modelo'
+    buttons:
+      new_register: 'Registrar novo modelo'
+    form_label_info:
+      name: 'Modelo do Carro'
+      motorization: 'Ex: 1.8'
+      fuel_type: 'Ex: Flex'

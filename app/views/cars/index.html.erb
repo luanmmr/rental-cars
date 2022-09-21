@@ -1,0 +1,142 @@
+<h1 class="ls-title-intro ls-ico-cart">
+  <%= Car.model_name.human(count: 2) %>
+</h1>
+
+<ul class="ls-tabs-nav">
+  <li class="ls-active">
+    <a data-ls-module="tabs" href="#cars">
+     <%= Car.model_name.human(count: 2) %>
+    </a>
+  </li>
+  <li>
+    <a data-ls-module="tabs" href="#car_models">
+      <%= CarModel.model_name.human(count: 2) %>
+    </a>
+  </li>
+  <li>
+    <a data-ls-module="tabs" href="#manufacturers">
+      <%= Manufacturer.model_name.human(count: 2) %>
+    </a>
+  </li>
+</ul>
+
+<div class="ls-tabs-container">
+
+  <div id="cars" class="ls-tab-content ls-active">
+    <table class="ls-table ls-table-striped ls-bg-header">
+      <thead>
+        <tr>
+          <th>
+            <%= Car.human_attribute_name('license_plate') %>
+          </th>
+          <th class="hidden-xs">
+            <%= CarModel.human_attribute_name('manufacturer_id') %>
+          </th>
+          <th>
+            <%= Car.human_attribute_name('car_model') %>
+          </th>
+          <th class="hidden-xs">
+            <%= Car.human_attribute_name('subsidiary') %>
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @cars.each do |car| %>
+        <tr>
+          <td><%= link_to car.license_plate, car_path(car) %></td>
+          <td class="hidden-xs"><%= car.car_model.manufacturer.name %></td>
+          <td><%= car.car_model.name %></td>
+          <td class="hidden-xs"><%= car.subsidiary.name %></td>
+          <td id=<%= "car-#{car.id}" %>>
+            <%= link_to t(:edit, scope: [:application_view, :buttons]),
+                          edit_car_path(car), class: "ls-btn" %>
+            <%= link_to t(:delete, scope: [:application_view, :buttons]),
+                          car, class: "ls-btn-primary-danger
+            ls-ico-remove", method: :delete, data: {confirm: "#{t(:confirm?,
+                               scope: [:application_view, :messages])}"} %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to t(:new_register, scope: [:car_view, :buttons]),
+                  new_car_path, class: 'ls-btn-primary' %>
+  </div>
+
+  <div id="car_models" class="ls-tab-content">
+    <table class="ls-table ls-table-striped ls-bg-header">
+      <thead>
+        <tr>
+          <th>
+           <%= Car.model_name.human %>
+          </th>
+          <th class="hidden-xs">
+           <%= CarModel.human_attribute_name('manufacturer_id') %>
+          </th>
+          <th>
+           <%= CarModel.human_attribute_name('car_category_id') %>
+          </th>
+          <th class="hidden-xs">
+           <%= CarModel.human_attribute_name('year') %>
+          </th>
+          <th>
+           <%= CarModel.human_attribute_name('motorization') %>
+          </th>
+          <th class="hidden-xs">
+           <%= CarModel.human_attribute_name('fuel_type') %>
+          </th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @car_models.each do |car_model| %>
+        <tr>
+          <td><%= car_model.name %></td>
+          <td class="hidden-xs"><%= car_model.manufacturer.name %></td>
+          <td><%= car_model.car_category.name %></td>
+          <td class="hidden-xs"><%= car_model.year %></td>
+          <td><%= car_model.motorization %></td>
+          <td class="hidden-xs"><%= car_model.fuel_type %></td>
+          <td id=<%= "car_model-#{car_model.id}" %> colspan="2">
+            <%= link_to t(:edit, scope: [:application_view, :buttons]),
+                          edit_car_model_path(car_model), class: "ls-btn" %>
+            <%= link_to t(:delete, scope: [:application_view, :buttons]),
+                          car_model, class: "ls-btn-primary-danger
+            ls-ico-remove", method: :delete, data: {confirm: "#{t(:confirm?,
+                               scope: [:application_view, :messages])}"} %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to t(:new_register, scope: [:car_model_view, :buttons]),
+                new_car_model_path, class: 'ls-btn-primary' %>
+  </div>
+
+  <div id="manufacturers" class="ls-tab-content">
+    <% @manufacturers.each do |manufacturer| %>
+    <div class="ls-list">
+      <header class="ls-list-header">
+        <div class="ls-list-title col-md-9">
+          <h5 class="ls-title-5" ><%= manufacturer.name %></h5>
+        </div>
+        <div class="col-md-3 ls-txt-right"
+        id="manufacturer-<%= manufacturer.id %>">
+          <%= link_to t(:edit, scope: [:application_view, :buttons]),
+                        edit_manufacturer_path(manufacturer), class: "ls-btn" %>
+          <%= link_to t(:delete, scope: [:application_view, :buttons]),
+                        manufacturer, class: "ls-btn-primary-danger
+          ls-ico-remove", method: :delete, data: {confirm: "#{t(:confirm?,
+                             scope: [:application_view, :messages])}"} %>
+        </div>
+      </header>
+    </div>
+    <% end %>
+    <br>
+    <%= link_to t(:new_register, scope: [:manufacturer_view, :buttons]),
+                  new_manufacturer_path, class: 'ls-btn-primary' %>
+  </div>
+
+
+</div>

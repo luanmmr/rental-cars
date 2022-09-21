@@ -1,0 +1,47 @@
+---
+pt-BR:
+  rentals:
+    create:
+      success: 'Locação agendada com sucesso'
+    update:
+      success: 'Locação editada com sucesso'
+    cancellation_confirmation:
+      success: 'Locação cancelada com sucesso'
+    create_book:
+      success: 'Locação efetivada'
+    show:
+      expired: 'A locação expirou'
+  activerecord:
+    models:
+      rental:
+        one: 'Locação'
+        other: 'Locações'
+    attributes:
+      rental:
+        code: 'Código'
+        start_date: 'Data de início'
+        end_date: 'Data de fim'
+        client_id: 'Cliente'
+        client: 'Cliente'
+        car_category_id: 'Categoria do Carro'
+        car_category: 'Categoria do Carro'
+        user_id: 'Usuário'
+        user: 'Usuário'
+        status:
+          scheduled: 'Agendada'
+          in_progress: 'Em andamento'
+          expired: 'Expirada'
+          canceled: 'Cancelada'
+    methods:
+      rental:
+        valid_start_date:
+          invalid_start_date: 'deve ser a partir da data atual'
+        valid_end_date:
+          invalid_end_date: 'deve ser após data de início'
+        availables_cars:
+          no_car: 'Não há carros dessa categoria disponível para o período'
+          incomplete_rental: 'Categoria sem modelos associados ou locação cadastrada incorretamente'
+        daily_price_total:
+          incomplete_rental: 'Locação cadastrada incorretamente'
+        expired?:
+          expired_rental: 'A locação expirou'

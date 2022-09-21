@@ -1,0 +1,53 @@
+<% if @car_category.errors.any? %>
+  <div class="ls-alert-danger">
+    <%= t(:validation_error, scope: [:application_view, :messages]) %>
+  </div>
+    <ul>
+      <% @car_category.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+      <% end %>
+    </ul>
+    <br>
+<% end %>
+
+<br>
+
+<%= form_with(model: @car_category, local: true, class: "ls-form-horizontal") do
+                                                              |form| %>
+<label class="ls-label col-md-3">
+  <%= form.label :name %>
+  <p class="ls-label-info">
+    <%= t(:name, scope: [:car_category_view, :form_label_info]) %>
+  </p>
+  <%= form.text_field :name %>
+</label>
+
+<label class="ls-label col-md-3">
+  <%= form.label :daily_rate %>
+  <p class="ls-label-info">
+    <%= t(:daily_rate, scope: [:car_category_view, :form_label_info]) %>
+  </p>
+  <%= form.text_field :daily_rate %>
+</label>
+
+<label class="ls-label col-md-3">
+  <%= form.label :car_insurance %>
+  <p class="ls-label-info">
+    <%= t(:car_insurance, scope: [:car_category_view, :form_label_info]) %>
+  </p>
+  <%= form.text_field :car_insurance %>
+</label>
+
+<label class="ls-label col-md-3">
+  <%= form.label :third_party_insurance %>
+  <p class="ls-label-info">
+    <%= t(:third_party_insurance,
+          scope: [:car_category_view, :form_label_info]) %>
+  </p>
+  <%= form.text_field :third_party_insurance %>
+</label>
+
+<div class="ls-actions-btn">
+  <%= form.submit class: 'ls-btn-primary' %>
+</div>
+<% end %>

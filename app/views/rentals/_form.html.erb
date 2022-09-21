@@ -1,0 +1,54 @@
+<% if @rental.errors.any? %>
+  <div class="ls-alert-danger">
+    <%= t(:validation_error, scope: [:application_view, :messages]) %>
+  </div>
+  <ul>
+    <% @rental.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<br>
+
+<%= form_with(model: @rental, local: true, class: "ls-form-horizontal") do
+                                                                 |form| %>
+<label class="ls-label col-md-3">
+    <%= form.label :start_date %>
+      <p class="ls-label-info"></p>
+        <%= form.text_field :start_date, class: "datepicker",
+                            id: "datepickerExample",
+                            placeholder: "dd/mm/aaaa" %>
+</label>
+
+<label class="ls-label col-md-3">
+  <%= form.label :end_date %>
+    <p class="ls-label-info"></p>
+  <%= form.text_field :end_date, class: "datepicker",
+                      id: "datepickerExample",
+                      placeholder: "dd/mm/aaaa" %>
+</label>
+
+<label class="ls-label col-md-3">
+  <%= form.label :client_id %>
+  <p class="ls-label-info"></p>
+  <div class="ls-custom-select">
+   <%= form.collection_select :client_id, @clients, :id,
+                             :name_document, class: "ls-custom" %>
+  </div>
+</label>
+
+<label class="ls-label col-md-3">
+  <%= form.label :car_category_id %>
+  <p class="ls-label-info"></p>
+  <div class="ls-custom-select">
+   <%= form.collection_select :car_category_id, @car_categories, :id,
+                              :name, class: "ls-custom" %>
+  </div>
+</label>
+
+<div class="ls-actions-btn">
+  <%= form.submit class: 'ls-btn-primary' %>
+</div>
+
+<% end %>

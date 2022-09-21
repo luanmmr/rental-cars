@@ -1,0 +1,18 @@
+---
+pt-BR:
+  application_view:
+    rental_cars: 'Aluguel de Carros'
+    brand: 'Rental Cars'
+    topbar:
+      logout: 'Sair'
+      back_to_list_of_services: 'Voltar à lista de serviços'
+    menu:
+      home_page: 'Home Page'
+    buttons:
+      edit: 'Editar'
+      delete: 'Deletar'
+      cancel: 'Cancelar'
+    messages:
+      confirm?: 'Tem certeza?'
+      validation_error: 'Você deve corrigir os seguintes erros para continuar'
+      results_found: 'resultado(s) encontrado(s)'

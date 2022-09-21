@@ -1,0 +1,10 @@
+---
+pt-BR:
+  manufacturer_view:
+    title:
+      editing_manufacturer: 'Editando Fabricante'
+      new_manufacturer: 'Nova Fabricante'
+    buttons:
+      new_register: 'Registrar novo fabricante'
+    form_label_info:
+      name: 'Nome da fabricante'

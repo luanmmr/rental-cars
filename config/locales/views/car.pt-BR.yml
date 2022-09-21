@@ -1,0 +1,10 @@
+---
+pt-BR:
+  car_view:
+    title:
+      editing_car: 'Editando Carro'
+      new_car: 'Novo Carro'
+    buttons:
+      new_register: 'Registrar novo carro'
+    form_label_info:
+      license_plate: 'Ex: RBY1995 ou EAE2A04'
